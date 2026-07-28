@@ -8,6 +8,7 @@ from schemas.task_schema import (
 from services.task_service import (
     create_task,
     delete_task,
+    get_all_tasks,
     get_tasks_by_project_id,
     update_task,
 )
@@ -51,6 +52,13 @@ def get_project_tasks(
         priority=priority,
         assignee= assignee
     )
+
+@task_router.get(
+    "/tasks",
+    response_model=list[TaskDetail],
+)
+def get_all_task_list() -> list[TaskDetail]:
+    return get_all_tasks()
 
 # PATCH 업무 정보 또는 상태 수정
 @task_router.patch(
