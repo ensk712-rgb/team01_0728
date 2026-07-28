@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from backend.schemas.project_schema import *
-from backend.services.project_service import *
+from schemas.project_schema import *
+from services.project_service import *
 
 router = APIRouter()
 

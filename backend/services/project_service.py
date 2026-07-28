@@ -1,4 +1,4 @@
-from backend.schemas.project_schema import ProjectCreate, ProjectGet, ProjectUpdate
+from schemas.project_schema import ProjectCreate, ProjectGet, ProjectUpdate
 
 
 # 1. 입력
