@@ -18,3 +18,4 @@ __pycache__/
 !.vscode/settings.json
 
 main.py
+main_t.py
