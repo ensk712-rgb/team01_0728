@@ -6,7 +6,7 @@ from schemas.task_schema import TaskCreate, TaskDetail, TaskUpdate
 
 
 # 서버가 실행되는 동안만 유지되는 가짜 데이터
-def tasks_get_all() -> list[TaskDetail]:
+def task_get_all() -> list[TaskDetail]:
     result = [
         {
             "id": 1,
@@ -155,7 +155,3 @@ def tasks_get_all() -> list[TaskDetail]:
     ]
 
     return result
-
-@task_router.get("/tasks", response_model=list[TaskDetail])
-def get_all_tasks() -> list[TaskDetail]:
-    return tasks_get_all()
